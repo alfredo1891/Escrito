@@ -71,3 +71,13 @@ function ListarModelos($arrayproductos,$modelo){
     }
 }
 
+
+function calcularValorPromedio() {
+    $valorTotal = 0;
+    $cantidadTotal = count['nombre'];
+    if ($cantidadTotal == 0) return 0;
+    foreach (['nombre'] as $producto) {
+        $valorTotal += $producto['valor'];
+    }
+    return $valorTotal / $cantidadTotal;
+    }
