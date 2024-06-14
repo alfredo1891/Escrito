@@ -12,10 +12,21 @@ return $arrayusuarios;
 
 
 function buscarProductoporModelo($arrayproductos, $modelo) {
-    foreach ($arrayproductos as $arrayproductos) {
+    foreach ($arrayproductos as $producto) {
         if ($arrayproductos['modelo'] == $modelo) {
-            return "Nombre: " . $arrayproductos['nombre'] . "<br>";
+            return "Nombre: " . $producto['nombre'] . "<br>";
         }
     }
     return "Producto no encontrado.<br>";
 }
+function mostrarProductos($arrayproductos) {
+    $result = '';
+    foreach ($arrayproductos as $producto) {
+        $result .= "Nombre: " . $producto['nombre'] . ", cantidad: " . $prducto['modelo'] . "<br>";
+        
+   
+    }
+    return $result;
+}
+
+
