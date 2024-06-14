@@ -1,9 +1,10 @@
 <?
-function agregarProducto($arrayproductos,$nombre,$cantidad,$modelo){
+function agregarProducto($arrayproductos,$nombre,$cantidad,$modelo,$valor){
     $arrayproductos = array(
         "nombre" => $nombre,
         "cantidad" => $cantidad,
-        "modelo" => $modelo
+        "modelo" => $modelo,
+        "valor" => $valor
     );
 }
 $arrayproductos = [];
@@ -22,11 +23,23 @@ function buscarProductoporModelo($arrayproductos, $modelo) {
 function mostrarProductos($arrayproductos) {
     $result = '';
     foreach ($arrayproductos as $producto) {
-        $result .= "Nombre: " . $producto['nombre'] . ", cantidad: " . $prducto['modelo'] . "<br>";
+        $result .= "Nombre: " . $producto['nombre'] . ", cantidad: " . $producto['cantidad'] . ", Modelo: " . $producto['modelo'] . ", valor: " . $producto['valor'] . "<br>";
         
    
     }
     return $result;
 }
+
+function actualizarProducto($arrayproductos, $cantidad, $nombre, $modelo,$valor) {
+    foreach ($arrayproductos as &$producto) {
+        if ($producto['modelo'] == $modelo) {
+            $producto['nombre'] = $nombre;
+            $producto['cantidad'] = $cantidad;
+            break;
+        }
+    }
+    return $arrayproductos;
+}
+
 
 
