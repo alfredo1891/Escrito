@@ -44,10 +44,8 @@ function actualizarProducto($arrayproductos, $cantidad, $nombre, $modelo,$valor)
 
 
 function CalcularValor($arrayproductos,$valor){
-$valores = '';
-foreach ($arrayproductos as $producto){
-   
-}
+$cantidadTotal = count['valor'];
+
 }
 
 
