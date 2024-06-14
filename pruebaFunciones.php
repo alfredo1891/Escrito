@@ -63,3 +63,11 @@ function FiltrarPorValor($arrayproductos,$valor){
 }
 
 
+function ListarModelos($arrayproductos,$modelo){
+    $modelos = '';
+    foreach ($arrayproductos as $producto){
+        $modelos .= "Los modelos disponibles son: " . $producto['modelo'] . "<br>";
+        
+    }
+}
+
