@@ -8,7 +8,7 @@ function agregarProducto($arrayproductos,$nombre,$cantidad,$modelo,$valor){
     );
 }
 $arrayproductos = [];
-$arrayproductos= agregarProducto($arrayproductos,"Heladera","1","James");
+
 return $arrayusuarios;
 
 
@@ -35,11 +35,31 @@ function actualizarProducto($arrayproductos, $cantidad, $nombre, $modelo,$valor)
         if ($producto['modelo'] == $modelo) {
             $producto['nombre'] = $nombre;
             $producto['cantidad'] = $cantidad;
+            $producto['valor'] = $valor;
             break;
         }
     }
     return $arrayproductos;
 }
 
+
+function CalcularValor($arrayproductos,$valor){
+$valores = '';
+foreach ($arrayproductos as $producto){
+   
+}
+}
+
+
+
+
+function FiltrarPorValor($arrayproductos,$valor){
+    foreach ($arrayproductos as $producto) {
+        if ($arrayproductos['valor'] >= '0') {
+            return "Nombre: " . $producto['nombre'] . "<br>";
+        }
+    }
+    return "Producto no encontrado.<br>";
+}
 
 
